@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 2px solid #000;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+
+.container .item {
+    border: 2px solid #000;
+    background-color: skyblue;
+    padding: 10px;
+
+}
+
+/* place-self */
+/* aline-self+justify-self를 같이 단축해서 부르는 방법!! */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    gap: 10px;
+}
+
+.item{
+
+   place-self: center;
+   place-self: center center;
+   place-self: start center;
+   place-self: start start;
+   
+}

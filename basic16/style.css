@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 2px solid #000;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+
+.container .item {
+    border: 2px solid #000;
+    background-color: skyblue;
+    padding: 10px;
+
+}
+
+/* aline-self */
+/* 개별 아이템 세로 정렬 */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    gap: 10px;
+}
+
+.item:nth-child(2) {
+
+    align-self: center;
+}

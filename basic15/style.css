@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 2px solid #000;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+
+.container .item {
+    border: 2px solid #000;
+    background-color: skyblue;
+    padding: 10px;
+
+}
+
+/* place-content  
+aline-content 와 justify-content를 같이 쓸 수있는 단축속성*/
+/* aline-content ,justify-content 순서로 작성, 만일 하나만 적으면 두 속성 모드에게 적용  */
+
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+   
+ place-content: center;
+ place-content: space-between center;
+}
+
+.item {}
