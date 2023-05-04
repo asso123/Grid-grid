@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 2px solid #000;
+    background-color: green;
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: yellow;
+    padding: 10px;
+}
+
+
+
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        'header header header'
+        'side-a main side-b'
+        '...    ...    ...'
+        'footer footer footer';
+        height: 80vh;
+        grid-auto-rows: 100px 1fr 30px 100px;
+}
+
+.item {}
+
+/* grid-template-areas
+    각 영역의 이름을 붙이고 그 이름을 이용해서 배치하는 방법 
+    
+    빈칸만들기- 마침표를 셀이 있는 자리에 입력해두면 됨!( 마침표대신 none, ..여러개의 마침표로 표현 할 수 있다 공백없이 마침표를 여러개 찍으면 하나의 마침표와 같다
+    사이간격은 한칸 이상만 있으면 된당*/
+
+.header{grid-area: header;}
+
+.side-a {grid-area: side-a;}
+
+.side-b {grid-area: side-b;}
+
+.main {grid-area:main;}
+
+.footer {grid-area:footer;}
